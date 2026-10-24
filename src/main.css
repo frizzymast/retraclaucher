@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Geist";
+  src: url("/Geist-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 10000;
+}
+
+@font-face {
+  font-family: "BinancePlex";
+  src: url("/BinancePlexFont.ttf") format("truetype-variations");
+  font-weight: 100 10000;
+}
+
+@import "tailwindcss";
+
+html,
+body {
+  --RETRAC: #1a1a1a;
+  --ACCENT: #10b981;
+  /* Emerald Green */
+  --ACCENT-VIBRANT: #34d399;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Geist", "BinancePlex", sans-serif;
+  color: #ffffff;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  outline: none;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #050505;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+  overflow: hidden;
+}
+
+.font-plex {
+  font-family: "Inter", "BinancePlex", sans-serif;
+}
+
+.font-geist {
+  font-family: "Inter", "Geist", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Premium Scrollbar */
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-vibrant {
+  background: rgba(16, 185, 129, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.animate-move {
+  animation: move 7s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes shimmer {
+  100% {
+    mask-position: left;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+@theme {
+  --color-neutral-900: #0a0a0a;
+  --color-neutral-800: #121212;
+  --color-neutral-700: #1a1a1a;
+  --color-neutral-600: #262626;
+  --color-accent: var(--ACCENT);
+  --color-accent-vibrant: var(--ACCENT-VIBRANT);
+}
